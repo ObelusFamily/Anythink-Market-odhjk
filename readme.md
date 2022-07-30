@@ -11,3 +11,7 @@ When implementing a new feature or fixing a bug, please create a new pull reques
 ## First setup
 
 **[TODO 05/01/2018 @vanessa-cooper]:** _It's been a while since anyone ran a fresh copy of this repo. I think it's worth documenting the steps needed to install and run the repo on a new machine?_
+
+- Install docker and docker-compose on your machine. You can check if the installation is successful by running `docker -v` and `docker-compose -v`
+
+- `cd` into this folder, and run `docker-compose up`. (If you have an error message about supported version, try changing the version property of the `docker-compose.yml` file). This will start the postgres database, the frontend and the backend. You can check services are running correctly by pinging the api (`localhost:3000/api/ping`) and creating a user `localhost:3001/register`.
