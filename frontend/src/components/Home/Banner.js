@@ -29,17 +29,18 @@ const Banner = (props) => {
             A place to{" "}
             <span onClick={() => setDisplaySearchInput(true)}>get</span>
           </span>
-          {displaySearchInput && (
-            <input
-              type="text"
-              placeholder="What is it that you truly desire?"
-              value={filterSearch}
-              onChange={handleFilterSearchChange}
-              name="title"
-              style={{ margin: "0 20px" }}
-              id="search-box"
-            />
-          )}
+          <input
+            type="text"
+            placeholder="What is it that you truly desire?"
+            value={filterSearch}
+            onChange={handleFilterSearchChange}
+            name="title"
+            style={{
+              margin: "0 20px",
+              display: displaySearchInput ? "inline-block" : "none",
+            }}
+            id="search-box"
+          />
           <span> the cool stuff.</span>
         </div>
       </div>
