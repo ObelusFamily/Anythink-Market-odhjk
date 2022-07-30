@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import agent from "../../agent";
 import logo from "../../imgs/logo.png";
 
@@ -15,9 +15,9 @@ const Banner = (props) => {
         value,
         (page) => agent.Items.byTitle(value, page),
         agent.Items.byTitle(value)
-      )
+      );
     }
-  }
+  };
 
   return (
     <div className="banner text-white">
@@ -31,7 +31,9 @@ const Banner = (props) => {
             value={filterSearch}
             onChange={handleFilterSearchChange}
             name="title"
-            style={{margin: '0 20px'}}/>
+            style={{ margin: "0 20px" }}
+            id="search-box"
+          />
           <span> the cool stuff.</span>
         </div>
       </div>
