@@ -62,6 +62,7 @@ const mapStateToProps = (state) => ({
   ...state.itemList,
   tags: state.home.tags,
   token: state.common.token,
+  searchedTitle: state.itemList.title,
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -92,6 +93,7 @@ const MainView = (props) => {
         loading={props.loading}
         itemsCount={props.itemsCount}
         currentPage={props.currentPage}
+        searchedTitle={props.searchedTitle}
       />
     </div>
   );
